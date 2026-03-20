@@ -1,3 +1,4 @@
+import React from "react";
 import { ShieldCheck, Clock, Gift } from "lucide-react";
 
 const usp = [

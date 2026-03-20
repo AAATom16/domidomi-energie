@@ -1,3 +1,4 @@
+import React from "react";
 import { ArrowRight, Clock, ShieldCheck } from "lucide-react";
 
 interface FinalCTAProps {

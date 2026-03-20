@@ -1,3 +1,4 @@
+import React from "react";
 import { CheckCircle2, TrendingDown, FileCheck, HeadphonesIcon, Users } from "lucide-react";
 
 export function ValueProposition() {

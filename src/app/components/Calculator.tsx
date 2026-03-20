@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { ArrowRight, ArrowLeft, Check, X, Zap, Flame, Home, Briefcase, Building2 } from "lucide-react";
 
 interface CalculatorProps {

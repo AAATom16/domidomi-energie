@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { ArrowRight, ChevronDown } from "lucide-react";
 import type { PrefillData } from "./Calculator";
 
@@ -81,7 +81,7 @@ export function Hero({ onOpenCalculator }: HeroProps) {
             {/* CTA buttons */}
             <div className="flex flex-wrap gap-3">
               <button
-                onClick={onOpenCalculator}
+                onClick={() => onOpenCalculator()}
                 className="flex items-center gap-2.5 bg-[#E30A1A] hover:bg-[#c00817] text-white rounded-full px-7 py-3.5 transition-colors shadow-lg"
                 style={{ fontSize: "16px", fontWeight: 600 }}
               >

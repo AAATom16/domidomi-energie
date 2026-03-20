@@ -1,3 +1,4 @@
+import React from "react";
 import { ArrowRight, Home, Briefcase, Building2 } from "lucide-react";
 
 interface SegmentsProps {

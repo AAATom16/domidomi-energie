@@ -1,3 +1,4 @@
+import React from "react";
 import { Mail, Phone, MapPin } from "lucide-react";
 
 interface FooterProps {
@@ -8,7 +9,11 @@ export function Footer({ onOpenCalculator }: FooterProps) {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer id="kontakt" className="bg-[#111928] text-white" style={{ fontFamily: "'Open Sans', sans-serif" }}>
+    <footer
+      id="kontakt"
+      className="bg-[#111928] text-white pb-[calc(5.5rem+env(safe-area-inset-bottom,0px))] md:pb-[calc(4.5rem+env(safe-area-inset-bottom,0px))]"
+      style={{ fontFamily: "'Open Sans', sans-serif" }}
+    >
       {/* Main footer */}
       <div className="max-w-5xl mx-auto px-6 py-12">
         <div className="grid grid-cols-1 md:grid-cols-[1fr_auto_auto] gap-10 md:gap-16">
@@ -79,14 +84,16 @@ export function Footer({ onOpenCalculator }: FooterProps) {
             <p className="text-white/40 uppercase tracking-widest mb-4" style={{ fontSize: "11px", fontWeight: 600 }}>Dokumenty</p>
             <ul className="flex flex-col gap-2.5">
               {[
-                { label: "GDPR — Ochrana osobních údajů", href: "#gdpr" },
-                { label: "Etický kodex", href: "#eticky-kodex" },
-                { label: "Informace o zprostředkovateli", href: "#zprostredkovatel" },
-                { label: "Reklamační řád", href: "#reklamacni-rad" },
+                { label: "GDPR — Ochrana osobních údajů", href: "/legal/ochrana-osobnich-udaju.pdf" },
+                { label: "Etický kodex", href: "/legal/eticky-kodex.pdf" },
+                { label: "Informace o zprostředkovateli", href: "/legal/informace-o-zprostredkovateli.pdf" },
+                { label: "Reklamační řád", href: "/legal/reklamacni-rad.pdf" },
               ].map((link) => (
                 <li key={link.label}>
                   <a
                     href={link.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="text-white/60 hover:text-white transition-colors"
                     style={{ fontSize: "14px" }}
                   >
@@ -100,16 +107,27 @@ export function Footer({ onOpenCalculator }: FooterProps) {
       </div>
 
       {/* Bottom bar */}
-      <div className="border-t border-white/10 py-4">
+      <div className="border-t border-white/10 pt-4 pb-6 md:pb-5">
         <div className="max-w-5xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-2">
-          <p className="text-white/35" style={{ fontSize: "12px" }}>
-            © {currentYear} DOMIDOMI Energie, s.r.o. Všechna práva vyhrazena.
+          <p className="text-white/35 text-center md:text-left" style={{ fontSize: "12px" }}>
+            © {currentYear} DOMIDOMI Energie. Všechna práva vyhrazena.
           </p>
-          <p className="text-white/35" style={{ fontSize: "12px" }}>
+          <p className="text-white/35 text-center md:text-right" style={{ fontSize: "12px" }}>
             Součást ekosystému{" "}
             <a href="https://domidomi.cz" className="text-white/55 hover:text-white transition-colors" target="_blank" rel="noopener noreferrer">
               domidomi.cz
             </a>
+          </p>
+        </div>
+
+        {/* Provozovatel / obchodní údaje — prostor pod lištou řeší padding na wrapperu v App */}
+        <div className="max-w-4xl mx-auto px-6 mt-5 pt-5 border-t border-white/10">
+          <p
+            className="text-white/30 text-center leading-relaxed"
+            style={{ fontSize: "11px", lineHeight: 1.55 }}
+          >
+            © {currentYear} DOMIDOMI services s.r.o., Kaprova 42/14, 110 00 Praha 1 – Staré Město, IČO: 24500801,
+            zapsaná v obchodním rejstříku vedeném Městským soudem v Praze, oddíl C, vložka 442221.
           </p>
         </div>
       </div>

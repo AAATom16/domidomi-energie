@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { ArrowRight, X } from "lucide-react";
 
 interface StickyBarProps {

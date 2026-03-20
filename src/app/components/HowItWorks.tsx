@@ -1,3 +1,4 @@
+import React from "react";
 import { ClipboardList, FileText, ThumbsUp } from "lucide-react";
 
 export function HowItWorks() {

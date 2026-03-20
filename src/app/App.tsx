@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { Header } from "./components/Header";
 import { Hero } from "./components/Hero";
 import { TrustBar } from "./components/TrustBar";
@@ -39,9 +39,7 @@ export default function App() {
       <Ecosystem />
       <FAQ />
       <FinalCTA onOpenCalculator={() => openCalculator()} />
-      <div className="pb-16 md:pb-0">
-        <Footer onOpenCalculator={() => openCalculator()} />
-      </div>
+      <Footer onOpenCalculator={() => openCalculator()} />
       <StickyBar onOpenCalculator={() => openCalculator()} />
       <CalculatorModal open={modalOpen} onClose={closeCalculator} prefill={prefill} />
     </div>

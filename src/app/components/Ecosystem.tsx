@@ -1,3 +1,4 @@
+import React from "react";
 import { ArrowRight, Zap, Thermometer, Home, PiggyBank, Wrench, CreditCard } from "lucide-react";
 
 export function Ecosystem() {
