@@ -106,22 +106,9 @@ export function Footer({ onOpenCalculator }: FooterProps) {
         </div>
       </div>
 
-      {/* Bottom bar */}
-      <div className="border-t border-white/10 pt-4 pb-6 md:pb-5">
-        <div className="max-w-5xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-2">
-          <p className="text-white/35 text-center md:text-left" style={{ fontSize: "12px" }}>
-            © {currentYear} DOMIDOMI Energie. Všechna práva vyhrazena.
-          </p>
-          <p className="text-white/35 text-center md:text-right" style={{ fontSize: "12px" }}>
-            Součást ekosystému{" "}
-            <a href="https://domidomi.cz" className="text-white/55 hover:text-white transition-colors" target="_blank" rel="noopener noreferrer">
-              domidomi.cz
-            </a>
-          </p>
-        </div>
-
-        {/* Provozovatel / obchodní údaje — prostor pod lištou řeší padding na wrapperu v App */}
-        <div className="max-w-4xl mx-auto px-6 mt-5 pt-5 border-t border-white/10">
+      {/* Spodní právní údaje */}
+      <div className="border-t border-white/10 pt-6 pb-6 md:pb-5">
+        <div className="max-w-4xl mx-auto px-6">
           <p
             className="text-white/30 text-center leading-relaxed"
             style={{ fontSize: "11px", lineHeight: 1.55 }}
